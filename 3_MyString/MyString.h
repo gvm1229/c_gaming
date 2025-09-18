@@ -4,6 +4,22 @@ namespace assignment1
 {
     class MyString
     {
+    private:
+        // 멤버 변수
+        // 문자열 데이터를 저장할 포인터
+        char* data;
+        // 문자열의 길이를 저장할 변수
+        unsigned int length;
+    
+        // 유틸리티 메소드
+        // 문자열 길이 계산 (length 미사용, 인자 s 의 길이 측정용)
+        // strlen 의 대체
+        unsigned int StrLength(const char* s) const;
+        // 깊은 문자열 복사
+        // strcopy 의 대체
+        void StrCopy(char* result, const char* src) const;
+    
+    // 기본 제공 시그니처 변경 없음
     public:
         MyString(const char* s);
         MyString(const MyString& other);
